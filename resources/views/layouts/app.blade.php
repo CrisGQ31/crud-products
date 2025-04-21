@@ -10,6 +10,19 @@
     @yield('content')
 </div>
 
+<a href="{{ route('register') }}" class="btn btn-primary">Registrar</a>
+{{--@auth--}}
+{{--    <form method="POST" action="{{ route('logout') }}">--}}
+{{--        @csrf--}}
+{{--        <button type="submit">Cerrar sesión</button>--}}
+{{--    </form>--}}
+{{--@endauth--}}
+
+<form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <button type="submit">Cerrar sesión</button>
+</form>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
